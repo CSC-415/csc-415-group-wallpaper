@@ -86,4 +86,33 @@ data class Character(
     val charFlaws: String,
     val charFeaturesAndTraits: String,
 
-    )
+    //Character description
+    val charAge: Int,
+    val charHeight: Int,
+    val charWeight: Int,
+    val charEyes: String,
+    val charSkin: String,
+    val charHair: String,
+
+    //Character appearance (image)
+    val charAppearance: String,
+
+    //Allies and Organizations
+    val charAllies: String,
+
+    //character backstory
+    val charBackstory: String,
+
+    //Additional features
+    val charAdditionalFeatures: String,
+
+    //Treasure (I don't know what else you expected)
+    val charTreasure: String,
+
+    //Spell casting stuff
+    val charSpellCastingClass: String,
+    val charSpellCastingAbility: String,
+    val charSpellAttackBonus: String,
+
+    //Magic Spell Stuff (I was told don't worry about it, it will happen eventually)
+)
