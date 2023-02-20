@@ -51,5 +51,6 @@ data class Character (
     val charStealth: Int,
     val charSurvival: Int,
 
-
+    //Extra 2
+    val charPassivePerception: Int,
 )
