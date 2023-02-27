@@ -12,107 +12,107 @@ data class Character(
     val charExperiencePoints: Int = 0,
 
     //Stats
-    val charStrength: Int,
-    val charDexterity: Int,
-    val charConstitution: Int,
-    val charIntelligence: Int,
-    val charWisdom: Int,
-    val charCharisma: Int,
+    val charStrength: Int = 0,
+    val charDexterity: Int = 0,
+    val charConstitution: Int = 0,
+    val charIntelligence: Int = 0,
+    val charWisdom: Int = 0,
+    val charCharisma: Int = 0,
 
     //2nd Bar
-    val charInspiration: Boolean,
-    val charProficiencyBonus: Int,
+    val charInspiration: Boolean = false,
+    val charProficiencyBonus: Int = 0,
 
     //Saving Throws
-    val charStrSave: Int,
-    val charDexSave: Int,
-    val charConSave: Int,
-    val charIntSave: Int,
-    val charWisSave: Int,
-    val charChaSave: Int,
+    val charStrSave: Int = 0,
+    val charDexSave: Int = 0,
+    val charConSave: Int = 0,
+    val charIntSave: Int = 0,
+    val charWisSave: Int = 0,
+    val charChaSave: Int = 0,
 
     //Skills Proficiencies - We store 0, 1, or 2 in this for NOT PROF, PROF, EXPERTISE
-    val charAcrobatics: Int,
-    val charAnimalHandling: Int,
-    val charArcana: Int,
-    val charAthletics: Int,
-    val charDeception: Int,
-    val charHistory: Int,
-    val charInsight: Int,
-    val charIntimidation: Int,
-    val charInvestigation: Int,
-    val charMedicine: Int,
-    val charNature: Int,
-    val charPerception: Int,
-    val charPerformance: Int,
-    val charPersuasion: Int,
-    val charReligion: Int,
-    val charSleightOfHand: Int,
-    val charStealth: Int,
-    val charSurvival: Int,
+    val charAcrobatics: Int = 0,
+    val charAnimalHandling: Int = 0,
+    val charArcana: Int = 0,
+    val charAthletics: Int = 0,
+    val charDeception: Int = 0,
+    val charHistory: Int = 0,
+    val charInsight: Int = 0,
+    val charIntimidation: Int = 0,
+    val charInvestigation: Int = 0,
+    val charMedicine: Int = 0,
+    val charNature: Int = 0,
+    val charPerception: Int = 0,
+    val charPerformance: Int = 0,
+    val charPersuasion: Int = 0,
+    val charReligion: Int = 0,
+    val charSleightOfHand: Int = 0,
+    val charStealth: Int = 0,
+    val charSurvival: Int = 0,
 
     //Extra 2
-    val charPassivePerception: Int,
-    val charAC: Int,
-    val charInitiative: Int,
-    val charSpeed: Int,
-    val charMaxHP: Int,
-    val charCurrentHP: Int,
-    val charTempHP: Int,
-    val charHitDieTotal: Int,
-    val charHitDieCurrent: Int,
-    val charDeathSavesSuccess: Int,
-    val charDeathSavesFails: Int,
+    val charPassivePerception: Int = 0,
+    val charAC: Int = 0,
+    val charInitiative: Int = 0,
+    val charSpeed: Int = 0,
+    val charMaxHP: Int = 0,
+    val charCurrentHP: Int = 0,
+    val charTempHP: Int = 0,
+    val charHitDieTotal: Int = 0,
+    val charHitDieCurrent: Int = 0,
+    val charDeathSavesSuccess: Int = 0,
+    val charDeathSavesFails: Int = 0,
 
     //Coins and Equipment
-    val charCP: Int,
-    val charSP: Int,
-    val charEP: Int,
-    val charGP: Int,
-    val charPP: Int,
+    val charCP: Int = 0,
+    val charSP: Int = 0,
+    val charEP: Int = 0,
+    val charGP: Int = 0,
+    val charPP: Int = 0,
 
-    val charEquipment: String,
+    val charEquipment: String = "",
 
     //Prof and Languages
-    val charProficienciesAndLanguages: String,
+    val charProficienciesAndLanguages: String = "",
 
     //Attacks and spellcasting
-    val charAttacksAndSpellcasting: String,
+    val charAttacksAndSpellcasting: String = "",
 
     //RP Traits
-    val charPersonalityTraits: String,
-    val charIdeals: String,
-    val charBonds: String,
-    val charFlaws: String,
-    val charFeaturesAndTraits: String,
+    val charPersonalityTraits: String = "",
+    val charIdeals: String = "",
+    val charBonds: String = "",
+    val charFlaws: String = "",
+    val charFeaturesAndTraits: String = "",
 
     //Character description
-    val charAge: Int,
-    val charHeight: Int,
-    val charWeight: Int,
-    val charEyes: String,
-    val charSkin: String,
-    val charHair: String,
+    val charAge: Int = 0,
+    val charHeight: Int = 0,
+    val charWeight: Int = 0,
+    val charEyes: String = "",
+    val charSkin: String = "",
+    val charHair: String = "",
 
     //Character appearance (image)
-    val charAppearance: String,
+    val charAppearance: String = "",
 
     //Allies and Organizations
-    val charAllies: String,
+    val charAllies: String = "",
 
     //character backstory
-    val charBackstory: String,
+    val charBackstory: String = "",
 
     //Additional features
-    val charAdditionalFeatures: String,
+    val charAdditionalFeatures: String = "",
 
     //Treasure (I don't know what else you expected)
-    val charTreasure: String,
+    val charTreasure: String = "",
 
     //Spell casting stuff
-    val charSpellCastingClass: String,
-    val charSpellCastingAbility: String,
-    val charSpellAttackBonus: String,
+    val charSpellCastingClass: String = "",
+    val charSpellCastingAbility: String = "",
+    val charSpellAttackBonus: String = "",
 
     //Magic Spell Stuff (I was told don't worry about it, it will happen eventually)
 )
