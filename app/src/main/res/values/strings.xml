@@ -1,3 +1,41 @@
 <resources>
-    <string name="app_name">DudesAndDice</string>
+    <string name="app_name">TestDND</string>
+    <string name="test_label">Test Label</string>
+    <string name="str_label">STRENGTH</string>
+    <string name="dex_label">DEXTERITY</string>
+    <string name="con_label">CONSTITUTION</string>
+    <string name="int_label">INTELLIGENCE</string>
+    <string name="wis_label">WISDOM</string>
+    <string name="cha_label">CHARISMA</string>
+    <string name="name_label">Character Name</string>
+    <string name="header_str">Character Sheet Header</string>
+    <string name="class_label">Class &amp; Level</string>
+    <string name="bg_label">Background</string>
+    <string name="player_name_label">Player Name</string>
+    <string name="race_label">Race</string>
+    <string name="alignment_label">Alignment</string>
+    <string name="xp_label">Experience</string>
+    <string name="ac_label">ARMOR CLASS</string>
+    <string name="initiative_label">INITIATIVE</string>
+    <string name="speed_label">SPEED</string>
+    <string name="current_hp_label">CURRENT HP</string>
+    <string name="temp_hp_label">TEMPORARY HP</string>
+    <string name="saving_throws_label">SAVING THROWS</string>
+    <string name="str_save_label">STR</string>
+    <string name="int_save_label">INT</string>
+    <string name="wis_save_label">WIS</string>
+    <string name="dex_save_label">DEX</string>
+    <string name="con_save_label">CON</string>
+    <string name="cha_save_label">CHA</string>
+    <string name="skills_label">SKILLS</string>
+    <string name="attack_desc">Background image for attack box</string>
+    <string name="skill_desc">Background image for skill box</string>
+    <string name="attacks_label"><![CDATA[ATTACKS & SPELLCASTING]]></string>
+    <string name="features_desc">Background image for features and traits</string>
+    <string name="features_label"><![CDATA[FEATURES & TRAITS]]></string>
+    <string name="eq_label">EQUIPMENT</string>
+    <string name="eq_desc">Background for equipment box</string>
+    <string name="other_prof_label"><![CDATA[OTHER PROFICIENCIES & LANGUAGES]]></string>
+    <string name="other_prof_desc">Background for other proficiences box</string>
+
 </resources>
