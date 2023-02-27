@@ -1,4 +1,4 @@
-package com.example.dudesanddice
+package com.example.dudesanddice.model
 
 data class Character(
     //Top Bar
