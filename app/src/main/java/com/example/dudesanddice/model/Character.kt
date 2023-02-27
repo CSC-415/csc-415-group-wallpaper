@@ -2,14 +2,14 @@ package com.example.dudesanddice.model
 
 data class Character(
     //Top Bar
-    val charName: String,
-    val charClass: String,
-    val charLevel: Int,
-    val charBackground: String,
-    val charPlayerName: String,
-    val charRace: String,
-    val charAlignment: String,
-    val charExperiencePoints: Int,
+    val charName: String = "",
+    val charClass: String = "",
+    val charLevel: Int = 0,
+    val charBackground: String = "",
+    val charPlayerName: String = "",
+    val charRace: String = "",
+    val charAlignment: String = "",
+    val charExperiencePoints: Int = 0,
 
     //Stats
     val charStrength: Int,
