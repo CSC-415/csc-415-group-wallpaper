@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_sheet_by_hand)
 
-        val myCharacter = Character()
+        var myCharacter = Character()
 
         binding.nameBox.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(s: Editable) {}
