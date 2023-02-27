@@ -2,117 +2,117 @@ package com.example.dudesanddice.model
 
 data class Character(
     //Top Bar
-    val charName: String = "",
-    val charClass: String = "",
-    val charLevel: Int = 0,
-    val charBackground: String = "",
-    val charPlayerName: String = "",
-    val charRace: String = "",
-    val charAlignment: String = "",
-    val charExperiencePoints: Int = 0,
+    var charName: String = "",
+    var charClass: String = "",
+    var charLevel: Int = 0,
+    var charBackground: String = "",
+    var charPlayerName: String = "",
+    var charRace: String = "",
+    var charAlignment: String = "",
+    var charExperiencePoints: Int = 0,
 
     //Stats
-    val charStrength: Int = 0,
-    val charDexterity: Int = 0,
-    val charConstitution: Int = 0,
-    val charIntelligence: Int = 0,
-    val charWisdom: Int = 0,
-    val charCharisma: Int = 0,
+    var charStrength: Int = 0,
+    var charDexterity: Int = 0,
+    var charConstitution: Int = 0,
+    var charIntelligence: Int = 0,
+    var charWisdom: Int = 0,
+    var charCharisma: Int = 0,
 
     //2nd Bar
-    val charInspiration: Boolean = false,
-    val charProficiencyBonus: Int = 0,
+    var charInspiration: Boolean = false,
+    var charProficiencyBonus: Int = 0,
 
     //Saving Throws
-    val charStrSave: Int = 0,
-    val charDexSave: Int = 0,
-    val charConSave: Int = 0,
-    val charIntSave: Int = 0,
-    val charWisSave: Int = 0,
-    val charChaSave: Int = 0,
+    var charStrSave: Int = 0,
+    var charDexSave: Int = 0,
+    var charConSave: Int = 0,
+    var charIntSave: Int = 0,
+    var charWisSave: Int = 0,
+    var charChaSave: Int = 0,
 
     //Skills Proficiencies - We store 0, 1, or 2 in this for NOT PROF, PROF, EXPERTISE
-    val charAcrobatics: Int = 0,
-    val charAnimalHandling: Int = 0,
-    val charArcana: Int = 0,
-    val charAthletics: Int = 0,
-    val charDeception: Int = 0,
-    val charHistory: Int = 0,
-    val charInsight: Int = 0,
-    val charIntimidation: Int = 0,
-    val charInvestigation: Int = 0,
-    val charMedicine: Int = 0,
-    val charNature: Int = 0,
-    val charPerception: Int = 0,
-    val charPerformance: Int = 0,
-    val charPersuasion: Int = 0,
-    val charReligion: Int = 0,
-    val charSleightOfHand: Int = 0,
-    val charStealth: Int = 0,
-    val charSurvival: Int = 0,
+    var charAcrobatics: Int = 0,
+    var charAnimalHandling: Int = 0,
+    var charArcana: Int = 0,
+    var charAthletics: Int = 0,
+    var charDeception: Int = 0,
+    var charHistory: Int = 0,
+    var charInsight: Int = 0,
+    var charIntimidation: Int = 0,
+    var charInvestigation: Int = 0,
+    var charMedicine: Int = 0,
+    var charNature: Int = 0,
+    var charPerception: Int = 0,
+    var charPerformance: Int = 0,
+    var charPersuasion: Int = 0,
+    var charReligion: Int = 0,
+    var charSleightOfHand: Int = 0,
+    var charStealth: Int = 0,
+    var charSurvivar: Int = 0,
 
     //Extra 2
-    val charPassivePerception: Int = 0,
-    val charAC: Int = 0,
-    val charInitiative: Int = 0,
-    val charSpeed: Int = 0,
-    val charMaxHP: Int = 0,
-    val charCurrentHP: Int = 0,
-    val charTempHP: Int = 0,
-    val charHitDieTotal: Int = 0,
-    val charHitDieCurrent: Int = 0,
-    val charDeathSavesSuccess: Int = 0,
-    val charDeathSavesFails: Int = 0,
+    var charPassivePerception: Int = 0,
+    var charAC: Int = 0,
+    var charInitiative: Int = 0,
+    var charSpeed: Int = 0,
+    var charMaxHP: Int = 0,
+    var charCurrentHP: Int = 0,
+    var charTempHP: Int = 0,
+    var charHitDieTotal: Int = 0,
+    var charHitDieCurrent: Int = 0,
+    var charDeathSavesSuccess: Int = 0,
+    var charDeathSavesFails: Int = 0,
 
     //Coins and Equipment
-    val charCP: Int = 0,
-    val charSP: Int = 0,
-    val charEP: Int = 0,
-    val charGP: Int = 0,
-    val charPP: Int = 0,
+    var charCP: Int = 0,
+    var charSP: Int = 0,
+    var charEP: Int = 0,
+    var charGP: Int = 0,
+    var charPP: Int = 0,
 
-    val charEquipment: String = "",
+    var charEquipment: String = "",
 
     //Prof and Languages
-    val charProficienciesAndLanguages: String = "",
+    var charProficienciesAndLanguages: String = "",
 
     //Attacks and spellcasting
-    val charAttacksAndSpellcasting: String = "",
+    var charAttacksAndSpellcasting: String = "",
 
     //RP Traits
-    val charPersonalityTraits: String = "",
-    val charIdeals: String = "",
-    val charBonds: String = "",
-    val charFlaws: String = "",
-    val charFeaturesAndTraits: String = "",
+    var charPersonalityTraits: String = "",
+    var charIdeals: String = "",
+    var charBonds: String = "",
+    var charFlaws: String = "",
+    var charFeaturesAndTraits: String = "",
 
     //Character description
-    val charAge: Int = 0,
-    val charHeight: Int = 0,
-    val charWeight: Int = 0,
-    val charEyes: String = "",
-    val charSkin: String = "",
-    val charHair: String = "",
+    var charAge: Int = 0,
+    var charHeight: Int = 0,
+    var charWeight: Int = 0,
+    var charEyes: String = "",
+    var charSkin: String = "",
+    var charHair: String = "",
 
     //Character appearance (image)
-    val charAppearance: String = "",
+    var charAppearance: String = "",
 
     //Allies and Organizations
-    val charAllies: String = "",
+    var charAllies: String = "",
 
     //character backstory
-    val charBackstory: String = "",
+    var charBackstory: String = "",
 
     //Additional features
-    val charAdditionalFeatures: String = "",
+    var charAdditionalFeatures: String = "",
 
     //Treasure (I don't know what else you expected)
-    val charTreasure: String = "",
+    var charTreasure: String = "",
 
     //Spell casting stuff
-    val charSpellCastingClass: String = "",
-    val charSpellCastingAbility: String = "",
-    val charSpellAttackBonus: String = "",
+    var charSpellCastingClass: String = "",
+    var charSpellCastingAbility: String = "",
+    var charSpellAttackBonus: String = "",
 
     //Magic Spell Stuff (I was told don't worry about it, it will happen eventually)
 )
