@@ -277,7 +277,7 @@ class MainActivity : AppCompatActivity() {
             }
             override fun onTextChanged(s: CharSequence, start: Int,
                                        before: Int, count: Int) {
-                myCharacter. = s.toString()
+                myCharacter.charChaSave = s.toString().toInt()
             }
         })
     }
