@@ -486,7 +486,6 @@
                 android:layout_height="48dp"
                 android:autofillHints="Edit Text Here"
                 android:inputType="number"
-                android:textColor="@color/black"
                 app:layout_constraintEnd_toStartOf="@id/int_save"
                 app:layout_constraintStart_toStartOf="@id/saves"
                 app:layout_constraintTop_toTopOf="@id/saves" />
@@ -518,7 +517,6 @@
                 android:layout_height="48dp"
                 android:autofillHints="Edit Text Here"
                 android:inputType="number"
-                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@id/saves"
                 app:layout_constraintStart_toEndOf="@id/str_save"
                 app:layout_constraintTop_toTopOf="@id/saves" />
@@ -550,7 +548,6 @@
                 android:layout_height="48dp"
                 android:autofillHints="Edit Text Here"
                 android:inputType="number"
-                android:textColor="@color/black"
                 app:layout_constraintEnd_toStartOf="@id/wis_save"
                 app:layout_constraintStart_toStartOf="@id/saves"
                 app:layout_constraintTop_toBottomOf="@id/str_save" />
@@ -582,7 +579,6 @@
                 android:layout_height="48dp"
                 android:autofillHints="Edit Text Here"
                 android:inputType="number"
-                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@id/saves"
                 app:layout_constraintStart_toEndOf="@id/str_save"
                 app:layout_constraintTop_toBottomOf="@id/int_save" />
@@ -614,7 +610,6 @@
                 android:layout_height="48dp"
                 android:autofillHints="Edit Text Here"
                 android:inputType="number"
-                android:textColor="@color/black"
                 app:layout_constraintEnd_toStartOf="@id/cha_save"
                 app:layout_constraintStart_toStartOf="@id/saves"
                 app:layout_constraintTop_toBottomOf="@id/dex_save" />
@@ -646,7 +641,6 @@
                 android:layout_height="48dp"
                 android:autofillHints="Edit Text Here"
                 android:inputType="number"
-                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@id/saves"
                 app:layout_constraintStart_toEndOf="@id/con_save"
                 app:layout_constraintTop_toBottomOf="@id/wis_save" />

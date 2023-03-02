@@ -17,321 +17,470 @@ class MainActivity : AppCompatActivity() {
 
         val myCharacter = Character()
 
-        binding.nameBox.addTextChangedListener(object : TextWatcher{
+        bindInputToObject(myCharacter)
+    }
+
+    private fun bindInputToObject(myCharacter: Character) {
+        binding.nameBox.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charName = s.toString()
             }
         })
 
-        binding.classLevel.addTextChangedListener(object : TextWatcher{
+        binding.classLevel.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
-                myCharacter.charLevel = s.toString().toInt()
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
+                myCharacter.charClass = s.toString()
             }
         })
 
-        binding.background.addTextChangedListener(object : TextWatcher{
+        binding.background.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charBackground = s.toString()
             }
         })
 
-        binding.playerName.addTextChangedListener(object : TextWatcher{
+        binding.playerName.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charName = s.toString()
             }
         })
 
-        binding.race.addTextChangedListener(object : TextWatcher{
+        binding.race.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charRace = s.toString()
             }
         })
 
-        binding.alignment.addTextChangedListener(object : TextWatcher{
+        binding.alignment.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charAlignment = s.toString()
             }
         })
 
-        binding.xp.addTextChangedListener(object : TextWatcher{
+        binding.xp.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charExperiencePoints = s.toString().toInt()
             }
         })
 
-        binding.strBox.addTextChangedListener(object : TextWatcher{
+        binding.strBox.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charStrength = s.toString().toInt()
             }
         })
 
-        binding.dexBox.addTextChangedListener(object : TextWatcher{
+        binding.dexBox.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charDexterity = s.toString().toInt()
             }
         })
 
-        binding.conBox.addTextChangedListener(object : TextWatcher{
+        binding.conBox.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charConstitution = s.toString().toInt()
             }
         })
 
-        binding.intBox.addTextChangedListener(object : TextWatcher{
+        binding.intBox.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charIntelligence = s.toString().toInt()
             }
         })
 
-        binding.wisBox.addTextChangedListener(object : TextWatcher{
+        binding.wisBox.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charWisdom = s.toString().toInt()
             }
         })
 
-        binding.chaBox.addTextChangedListener(object : TextWatcher{
+        binding.chaBox.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charCharisma = s.toString().toInt()
             }
         })
 
-        binding.armorClass.addTextChangedListener(object : TextWatcher{
+        binding.armorClass.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charAC = s.toString().toInt()
             }
         })
 
-        binding.initiative.addTextChangedListener(object : TextWatcher{
+        binding.initiative.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charInitiative = s.toString().toInt()
             }
         })
 
-        binding.speed.addTextChangedListener(object : TextWatcher{
+        binding.speed.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charSpeed = s.toString().toInt()
             }
         })
 
-        binding.currHp.addTextChangedListener(object : TextWatcher{
+        binding.currHp.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charCurrentHP = s.toString().toInt()
             }
         })
 
-        binding.tempHp.addTextChangedListener(object : TextWatcher{
+        binding.tempHp.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charTempHP = s.toString().toInt()
             }
         })
 
-        binding.strSave.addTextChangedListener(object : TextWatcher{
+        binding.strSave.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charStrSave = s.toString().toInt()
             }
         })
 
-        binding.intSave.addTextChangedListener(object : TextWatcher{
+        binding.intSave.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charIntSave = s.toString().toInt()
             }
         })
 
-        binding.dexSave.addTextChangedListener(object : TextWatcher{
+        binding.dexSave.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charDexSave = s.toString().toInt()
             }
         })
 
-        binding.wisSave.addTextChangedListener(object : TextWatcher{
+        binding.wisSave.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charWisSave = s.toString().toInt()
             }
         })
 
-        binding.conSave.addTextChangedListener(object : TextWatcher{
+        binding.conSave.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charConSave = s.toString().toInt()
             }
         })
 
-        binding.chaSave.addTextChangedListener(object : TextWatcher{
+        binding.chaSave.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charChaSave = s.toString().toInt()
             }
         })
 
-        binding.skillsBox.addTextChangedListener(object : TextWatcher{
+        binding.skillsBox.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 //myCharacter. = s.toString()
             }
         })
 
-        binding.attacksBox.addTextChangedListener(object : TextWatcher{
+        binding.attacksBox.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charAttacksAndSpellcasting = s.toString()
             }
         })
 
-        binding.featuresBox.addTextChangedListener(object : TextWatcher{
+        binding.featuresBox.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charFeaturesAndTraits = s.toString()
             }
         })
 
-        binding.eqBox.addTextChangedListener(object : TextWatcher{
+        binding.eqBox.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charEquipment = s.toString()
             }
         })
 
-        binding.otherProfBox.addTextChangedListener(object : TextWatcher{
+        binding.otherProfBox.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int,
-                                           count: Int, after: Int) {
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
             }
-            override fun onTextChanged(s: CharSequence, start: Int,
-                                       before: Int, count: Int) {
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
                 myCharacter.charProficienciesAndLanguages = s.toString()
             }
         })

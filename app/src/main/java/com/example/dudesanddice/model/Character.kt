@@ -4,7 +4,6 @@ data class Character(
     //Top Bar
     var charName: String = "",
     var charClass: String = "",
-    var charLevel: Int = 0,
     var charBackground: String = "",
     var charPlayerName: String = "",
     var charRace: String = "",
