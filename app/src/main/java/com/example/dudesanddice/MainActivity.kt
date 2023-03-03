@@ -129,7 +129,12 @@ class MainActivity : AppCompatActivity() {
                 s: CharSequence, start: Int,
                 before: Int, count: Int
             ) {
-                myCharacter.charExperiencePoints = s.toString().toInt()
+                if (s.isNotEmpty()) {
+                    myCharacter.charExperiencePoints = s.toString().toInt()
+                } else {
+                    myCharacter.charExperiencePoints = 0
+                }
+
             }
         })
 
@@ -145,7 +150,11 @@ class MainActivity : AppCompatActivity() {
                 s: CharSequence, start: Int,
                 before: Int, count: Int
             ) {
-                myCharacter.charStrength = s.toString().toInt()
+                if (s.isNotEmpty()) {
+                    myCharacter.charStrength = s.toString().toInt()
+                } else {
+                    myCharacter.charStrength = 0
+                }
             }
         })
 
@@ -161,7 +170,11 @@ class MainActivity : AppCompatActivity() {
                 s: CharSequence, start: Int,
                 before: Int, count: Int
             ) {
-                myCharacter.charDexterity = s.toString().toInt()
+                if (s.isNotEmpty()) {
+                    myCharacter.charDexterity = s.toString().toInt()
+                } else {
+                    myCharacter.charDexterity = 0
+                }
             }
         })
 
@@ -177,7 +190,11 @@ class MainActivity : AppCompatActivity() {
                 s: CharSequence, start: Int,
                 before: Int, count: Int
             ) {
-                myCharacter.charConstitution = s.toString().toInt()
+                if (s.isNotEmpty()) {
+                    myCharacter.charConstitution = s.toString().toInt()
+                } else {
+                    myCharacter.charConstitution = 0
+                }
             }
         })
 
@@ -193,7 +210,11 @@ class MainActivity : AppCompatActivity() {
                 s: CharSequence, start: Int,
                 before: Int, count: Int
             ) {
-                myCharacter.charIntelligence = s.toString().toInt()
+                if (s.isNotEmpty()) {
+                    myCharacter.charIntelligence = s.toString().toInt()
+                } else {
+                    myCharacter.charIntelligence = 0
+                }
             }
         })
 
@@ -209,7 +230,11 @@ class MainActivity : AppCompatActivity() {
                 s: CharSequence, start: Int,
                 before: Int, count: Int
             ) {
-                myCharacter.charWisdom = s.toString().toInt()
+                if (s.isNotEmpty()) {
+                    myCharacter.charWisdom = s.toString().toInt()
+                }else{
+                    myCharacter.charWisdom = 0
+                }
             }
         })
 
@@ -225,7 +250,11 @@ class MainActivity : AppCompatActivity() {
                 s: CharSequence, start: Int,
                 before: Int, count: Int
             ) {
-                myCharacter.charCharisma = s.toString().toInt()
+                if (s.isNotEmpty()) {
+                    myCharacter.charCharisma = s.toString().toInt()
+                }else{
+                    myCharacter.charCharisma = 0
+                }
             }
         })
 
@@ -241,7 +270,11 @@ class MainActivity : AppCompatActivity() {
                 s: CharSequence, start: Int,
                 before: Int, count: Int
             ) {
-                myCharacter.charAC = s.toString().toInt()
+                if (s.isNotEmpty()) {
+                    myCharacter.charAC = s.toString().toInt()
+                }else{
+                    myCharacter.charAC = 0
+                }
             }
         })
 
@@ -257,7 +290,11 @@ class MainActivity : AppCompatActivity() {
                 s: CharSequence, start: Int,
                 before: Int, count: Int
             ) {
-                myCharacter.charInitiative = s.toString().toInt()
+                if (s.isNotEmpty()) {
+                    myCharacter.charInitiative = s.toString().toInt()
+                }else{
+                    myCharacter.charInitiative = 0
+                }
             }
         })
 
@@ -273,7 +310,11 @@ class MainActivity : AppCompatActivity() {
                 s: CharSequence, start: Int,
                 before: Int, count: Int
             ) {
-                myCharacter.charSpeed = s.toString().toInt()
+                if (s.isNotEmpty()) {
+                    myCharacter.charSpeed = s.toString().toInt()
+                }else{
+                    myCharacter.charSpeed = 0
+                }
             }
         })
 
@@ -289,7 +330,11 @@ class MainActivity : AppCompatActivity() {
                 s: CharSequence, start: Int,
                 before: Int, count: Int
             ) {
-                myCharacter.charCurrentHP = s.toString().toInt()
+                if (s.isNotEmpty()) {
+                    myCharacter.charCurrentHP = s.toString().toInt()
+                }else{
+                    myCharacter.charCurrentHP = 0
+                }
             }
         })
 
@@ -305,7 +350,11 @@ class MainActivity : AppCompatActivity() {
                 s: CharSequence, start: Int,
                 before: Int, count: Int
             ) {
-                myCharacter.charTempHP = s.toString().toInt()
+                if (s.isNotEmpty()) {
+                    myCharacter.charTempHP = s.toString().toInt()
+                }else{
+                    myCharacter.charTempHP = 0
+                }
             }
         })
 
@@ -321,7 +370,11 @@ class MainActivity : AppCompatActivity() {
                 s: CharSequence, start: Int,
                 before: Int, count: Int
             ) {
-                myCharacter.charStrSave = s.toString().toInt()
+                if (s.isNotEmpty()) {
+                    myCharacter.charStrSave = s.toString().toInt()
+                }else{
+                    myCharacter.charStrSave = 0
+                }
             }
         })
 
@@ -337,7 +390,11 @@ class MainActivity : AppCompatActivity() {
                 s: CharSequence, start: Int,
                 before: Int, count: Int
             ) {
-                myCharacter.charIntSave = s.toString().toInt()
+                if (s.isNotEmpty()) {
+                    myCharacter.charIntSave = s.toString().toInt()
+                }else{
+                    myCharacter.charIntSave = 0
+                }
             }
         })
 
@@ -353,7 +410,11 @@ class MainActivity : AppCompatActivity() {
                 s: CharSequence, start: Int,
                 before: Int, count: Int
             ) {
-                myCharacter.charDexSave = s.toString().toInt()
+                if (s.isNotEmpty()) {
+                    myCharacter.charDexSave = s.toString().toInt()
+                }else{
+                    myCharacter.charDexSave = 0
+                }
             }
         })
 
@@ -369,7 +430,11 @@ class MainActivity : AppCompatActivity() {
                 s: CharSequence, start: Int,
                 before: Int, count: Int
             ) {
-                myCharacter.charWisSave = s.toString().toInt()
+                if (s.isNotEmpty()) {
+                    myCharacter.charWisSave = s.toString().toInt()
+                }else{
+                    myCharacter.charWisSave = 0
+                }
             }
         })
 
@@ -385,7 +450,11 @@ class MainActivity : AppCompatActivity() {
                 s: CharSequence, start: Int,
                 before: Int, count: Int
             ) {
-                myCharacter.charConSave = s.toString().toInt()
+                if (s.isNotEmpty()) {
+                    myCharacter.charConSave = s.toString().toInt()
+                }else{
+                    myCharacter.charConSave = 0
+                }
             }
         })
 
@@ -401,7 +470,11 @@ class MainActivity : AppCompatActivity() {
                 s: CharSequence, start: Int,
                 before: Int, count: Int
             ) {
-                myCharacter.charChaSave = s.toString().toInt()
+                if (s.isNotEmpty()) {
+                    myCharacter.charChaSave = s.toString().toInt()
+                }else{
+                    myCharacter.charChaSave = 0
+                }
             }
         })
 
