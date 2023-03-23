@@ -49,7 +49,7 @@ data class Character(
     var charSleightOfHand: Int = 0,
     var charStealth: Int = 0,
     var charSurvivar: Int = 0,
-
+    var charSkillsBox: String = "",
     //Extra 2
     var charPassivePerception: Int = 0,
     var charAC: Int = 0,
