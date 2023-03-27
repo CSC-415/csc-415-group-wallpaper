@@ -37,5 +37,6 @@
     <string name="eq_desc">Background for equipment box</string>
     <string name="other_prof_label"><![CDATA[OTHER PROFICIENCIES & LANGUAGES]]></string>
     <string name="other_prof_desc">Background for other proficiences box</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
