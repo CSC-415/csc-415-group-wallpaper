@@ -3,6 +3,7 @@ package com.example.dudesanddice
 import android.content.Context
 import android.content.SharedPreferences
 import com.google.gson.GsonBuilder
+import android.util.Log
 
 object ModelPreferenceManager {
     lateinit var preferences: SharedPreferences
@@ -15,11 +16,16 @@ object ModelPreferenceManager {
 
     fun <Character> put (T : Character , key:String){
         val jsonString = GsonBuilder().create().toJson(T)
+        Log.d("ModelPreferenceManager", "Saving object with key $key: $jsonString")
         preferences.edit().putString(key, jsonString).apply()
+
+
     }
 
+    //changing
     inline fun <reified Character> get(key: String): Character {
         val value = preferences.getString(key, null)
+        Log.d("ModelPreferenceManager", "Retrieving object with key $key: $value")
         return GsonBuilder().create().fromJson(value, Character::class.java)
     }
 }

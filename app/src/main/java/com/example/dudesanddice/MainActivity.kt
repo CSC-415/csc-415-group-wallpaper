@@ -3,6 +3,7 @@ package com.example.dudesanddice
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.dudesanddice.databinding.ActivitySheetByHandBinding
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         bindInputToObject(myCharacter)
         ModelPreferenceManager.with(this)
         myCharacter = ModelPreferenceManager.get<Character>("user_char")
+        Log.d("MainActivity", "myCharacter: $myCharacter")
 
         binding.nameBox.setText(myCharacter.charName)
         binding.classLevel.setText(myCharacter.charClass)
