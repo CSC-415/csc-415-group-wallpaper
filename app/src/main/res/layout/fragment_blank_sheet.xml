@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:id="@+id/fragment_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_container_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <Button
+                    android:id="@+id/save_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SAVE"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--HEADER-->
+                <ImageView
+                    android:id="@+id/header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/header_str"
+                    android:src="@drawable/header"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/name_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/name_box"
+                    android:text="@string/name_label"
+                    app:layout_constraintStart_toStartOf="@id/name_box"
+                    app:layout_constraintTop_toBottomOf="@id/name_box" />
+
+                <TextView
+                    android:id="@+id/class_label"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/class_level"
+                    android:text="@string/class_label"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toTopOf="@id/class_level"
+                    app:layout_constraintStart_toStartOf="@id/class_level" />
+
+                <TextView
+                    android:id="@+id/bg_label"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/background"
+                    android:text="@string/bg_label"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toTopOf="@id/background"
+                    app:layout_constraintStart_toStartOf="@id/background" />
+
+                <TextView
+                    android:id="@+id/player_name_label"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/player_name"
+                    android:text="@string/player_name_label"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toTopOf="@id/player_name"
+                    app:layout_constraintStart_toStartOf="@id/player_name" />
+
+                <TextView
+                    android:id="@+id/race_label"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:labelFor="@id/race"
+                    android:text="@string/race_label"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toStartOf="@id/race"
+                    app:layout_constraintTop_toBottomOf="@id/race" />
+
+                <TextView
+                    android:id="@+id/alignment_label"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/alignment"
+                    android:text="@string/alignment_label"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toEndOf="@id/race_label"
+                    app:layout_constraintTop_toTopOf="@id/race_label" />
+
+                <TextView
+                    android:id="@+id/xp_label"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/class_level"
+                    android:text="@string/xp_label"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toEndOf="@id/alignment_label"
+                    app:layout_constraintTop_toTopOf="@id/race_label" />
+
+                <EditText
+                    android:id="@+id/name_box"
+                    android:layout_width="160dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:autofillHints="Name Here"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@id/header"
+                    app:layout_constraintStart_toStartOf="@id/header"
+                    app:layout_constraintTop_toTopOf="@id/header" />
+
+                <EditText
+                    android:id="@+id/class_level"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="25dp"
+                    android:autofillHints="Class/Level Here"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@id/header"
+                    app:layout_constraintStart_toStartOf="@id/header"
+                    app:layout_constraintTop_toTopOf="@id/header" />
+
+                <EditText
+                    android:id="@+id/background"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:autofillHints="Background Here"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/class_level"
+                    app:layout_constraintTop_toTopOf="@id/class_level" />
+
+                <EditText
+                    android:id="@+id/player_name"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:autofillHints="Player Name Here"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/background"
+                    app:layout_constraintTop_toTopOf="@id/class_level" />
+
+                <EditText
+                    android:id="@+id/race"
+                    android:layout_width="70dp"
+                    android:layout_height="15dp"
+                    android:autofillHints="Race Here"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@id/class_level"
+                    app:layout_constraintTop_toBottomOf="@id/class_level" />
+
+                <EditText
+                    android:id="@+id/alignment"
+                    android:layout_width="70dp"
+                    android:layout_height="15dp"
+                    android:autofillHints="Alignment Here"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/race"
+                    app:layout_constraintTop_toBottomOf="@id/class_level" />
+
+                <EditText
+                    android:id="@+id/xp"
+                    android:layout_width="70dp"
+                    android:layout_height="15dp"
+                    android:autofillHints="Experience Here"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/alignment"
+                    app:layout_constraintTop_toBottomOf="@id/class_level" />
+
+                <!--ATTRIBUTES-->
+                <TextView
+                    android:id="@+id/str_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/str_box"
+                    android:text="@string/str_label"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/str_box"
+                    app:layout_constraintStart_toStartOf="@id/str_box"
+                    app:layout_constraintTop_toBottomOf="@id/str_box" />
+
+                <TextView
+                    android:id="@+id/dex_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/dex_box"
+                    android:text="@string/dex_label"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/dex_box"
+                    app:layout_constraintStart_toStartOf="@id/dex_box"
+                    app:layout_constraintTop_toBottomOf="@id/dex_box" />
+
+                <TextView
+                    android:id="@+id/con_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/con_box"
+                    android:text="@string/con_label"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/con_box"
+                    app:layout_constraintStart_toStartOf="@id/con_box"
+                    app:layout_constraintTop_toBottomOf="@id/con_box" />
+
+                <TextView
+                    android:id="@+id/int_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/int_box"
+                    android:text="@string/int_label"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/int_box"
+                    app:layout_constraintStart_toStartOf="@id/int_box"
+                    app:layout_constraintTop_toBottomOf="@id/int_box" />
+
+                <TextView
+                    android:id="@+id/wis_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/wis_box"
+                    android:text="@string/wis_label"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/wis_box"
+                    app:layout_constraintStart_toStartOf="@id/wis_box"
+                    app:layout_constraintTop_toBottomOf="@id/wis_box" />
+
+                <TextView
+                    android:id="@+id/cha_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/cha_box"
+                    android:text="@string/cha_label"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/cha_box"
+                    app:layout_constraintStart_toStartOf="@id/cha_box"
+                    app:layout_constraintTop_toBottomOf="@id/cha_box" />
+
+                <EditText
+                    android:id="@+id/str_box"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:autofillHints="Edit Text Here"
+                    android:background="@drawable/attribute"
+                    android:digits="0123456789"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@id/dex_box"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/header" />
+
+                <EditText
+                    android:id="@+id/dex_box"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:autofillHints="Edit Text Here"
+                    android:background="@drawable/attribute"
+                    android:digits="0123456789"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@id/con_box"
+                    app:layout_constraintStart_toEndOf="@id/str_box"
+                    app:layout_constraintTop_toTopOf="@id/str_box" />
+
+                <EditText
+                    android:id="@+id/con_box"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:autofillHints="Edit Text Here"
+                    android:background="@drawable/attribute"
+                    android:digits="0123456789"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/dex_box"
+                    app:layout_constraintTop_toTopOf="@id/str_box" />
+
+                <EditText
+                    android:id="@+id/int_box"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:autofillHints="Edit Text Here"
+                    android:background="@drawable/attribute"
+                    android:digits="0123456789"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@id/wis_box"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/str_label" />
+
+                <EditText
+                    android:id="@+id/wis_box"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:autofillHints="Edit Text Here"
+                    android:background="@drawable/attribute"
+                    android:digits="0123456789"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@id/cha_box"
+                    app:layout_constraintStart_toEndOf="@id/int_box"
+                    app:layout_constraintTop_toTopOf="@id/int_box" />
+
+                <EditText
+                    android:id="@+id/cha_box"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:autofillHints="Edit Text Here"
+                    android:background="@drawable/attribute"
+                    android:digits="0123456789"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/wis_box"
+                    app:layout_constraintTop_toTopOf="@id/int_box" />
+
+                <!--COMBAT-->
+                <TextView
+                    android:id="@+id/ac_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/armor_class"
+                    android:text="@string/ac_label"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/armor_class"
+                    app:layout_constraintStart_toStartOf="@id/armor_class"
+                    app:layout_constraintTop_toBottomOf="@id/armor_class" />
+
+                <TextView
+                    android:id="@+id/initiative_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/initiative"
+                    android:text="@string/initiative_label"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/initiative"
+                    app:layout_constraintStart_toStartOf="@id/initiative"
+                    app:layout_constraintTop_toBottomOf="@id/armor_class" />
+
+                <TextView
+                    android:id="@+id/speed_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/speed"
+                    android:text="@string/speed_label"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/speed"
+                    app:layout_constraintStart_toStartOf="@id/speed"
+                    app:layout_constraintTop_toBottomOf="@id/armor_class" />
+
+                <TextView
+                    android:id="@+id/curr_hp_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/curr_hp"
+                    android:text="@string/current_hp_label"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/curr_hp"
+                    app:layout_constraintStart_toStartOf="@id/curr_hp"
+                    app:layout_constraintTop_toBottomOf="@id/curr_hp" />
+
+                <TextView
+                    android:id="@+id/temp_hp_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/curr_hp"
+                    android:text="@string/temp_hp_label"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/temp_hp"
+                    app:layout_constraintStart_toStartOf="@id/temp_hp"
+                    app:layout_constraintTop_toBottomOf="@id/temp_hp" />
+
+                <EditText
+                    android:id="@+id/armor_class"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:autofillHints="Edit Text Here"
+                    android:background="@drawable/armor_class"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@id/initiative"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/int_label" />
+
+                <EditText
+                    android:id="@+id/initiative"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:autofillHints="Edit Text Here"
+                    android:background="@drawable/box_square"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@id/speed"
+                    app:layout_constraintStart_toEndOf="@id/armor_class"
+                    app:layout_constraintTop_toTopOf="@id/armor_class" />
+
+                <EditText
+                    android:id="@+id/speed"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:autofillHints="Edit Text Here"
+                    android:background="@drawable/box_square"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/initiative"
+                    app:layout_constraintTop_toTopOf="@id/armor_class" />
+
+                <EditText
+                    android:id="@+id/curr_hp"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:autofillHints="Edit Text Here"
+                    android:background="@drawable/box_square"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@id/temp_hp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ac_label" />
+
+                <EditText
+                    android:id="@+id/temp_hp"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:autofillHints="Edit Text Here"
+                    android:background="@drawable/box_square"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/curr_hp"
+                    app:layout_constraintTop_toTopOf="@id/curr_hp" />
+
+                <!--SAVES-->
+                <TextView
+                    android:id="@+id/save_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/saves"
+                    android:text="@string/saving_throws_label"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/saves"
+                    app:layout_constraintEnd_toEndOf="@id/saves"
+                    app:layout_constraintStart_toStartOf="@id/saves" />
+
+                <ImageView
+                    android:id="@+id/saves"
+                    android:layout_width="300dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/saving_throws"
+                    android:contentDescription="@string/header_str"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/curr_hp_label" />
+
+                <TextView
+                    android:id="@+id/str_save_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/str_save"
+                    android:text="@string/str_save_label"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/str_save"
+                    app:layout_constraintStart_toEndOf="@id/str_save"
+                    app:layout_constraintTop_toTopOf="@id/str_save" />
+
+                <RadioButton
+                    android:id="@+id/str_prof"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/prof_shape"
+                    app:layout_constraintBottom_toBottomOf="@id/str_save"
+                    app:layout_constraintEnd_toStartOf="@id/str_save"
+                    app:layout_constraintStart_toStartOf="@id/saves"
+                    app:layout_constraintTop_toTopOf="@id/str_save" />
+
+                <EditText
+                    android:id="@+id/str_save"
+                    android:layout_width="50dp"
+                    android:layout_height="48dp"
+                    android:autofillHints="Edit Text Here"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toStartOf="@id/int_save"
+                    app:layout_constraintStart_toStartOf="@id/saves"
+                    app:layout_constraintTop_toTopOf="@id/saves" />
+
+                <TextView
+                    android:id="@+id/int_save_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/int_save"
+                    android:text="@string/int_save_label"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/str_save"
+                    app:layout_constraintStart_toEndOf="@id/int_save"
+                    app:layout_constraintTop_toTopOf="@id/str_save" />
+
+                <RadioButton
+                    android:id="@+id/int_prof"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/prof_shape"
+                    app:layout_constraintBottom_toBottomOf="@id/int_save"
+                    app:layout_constraintEnd_toStartOf="@id/int_save"
+                    app:layout_constraintStart_toEndOf="@id/str_save_label"
+                    app:layout_constraintTop_toTopOf="@id/int_save" />
+
+                <EditText
+                    android:id="@+id/int_save"
+                    android:layout_width="50dp"
+                    android:layout_height="48dp"
+                    android:autofillHints="Edit Text Here"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="@id/saves"
+                    app:layout_constraintStart_toEndOf="@id/str_save"
+                    app:layout_constraintTop_toTopOf="@id/saves" />
+
+                <TextView
+                    android:id="@+id/dex_save_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/str_save"
+                    android:text="@string/dex_save_label"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/dex_save"
+                    app:layout_constraintStart_toEndOf="@id/dex_save"
+                    app:layout_constraintTop_toTopOf="@id/dex_save" />
+
+                <RadioButton
+                    android:id="@+id/dex_prof"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/prof_shape"
+                    app:layout_constraintBottom_toBottomOf="@id/dex_save"
+                    app:layout_constraintEnd_toStartOf="@id/dex_save"
+                    app:layout_constraintStart_toStartOf="@id/saves"
+                    app:layout_constraintTop_toTopOf="@id/dex_save" />
+
+                <EditText
+                    android:id="@+id/dex_save"
+                    android:layout_width="50dp"
+                    android:layout_height="48dp"
+                    android:autofillHints="Edit Text Here"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toStartOf="@id/wis_save"
+                    app:layout_constraintStart_toStartOf="@id/saves"
+                    app:layout_constraintTop_toBottomOf="@id/str_save" />
+
+                <TextView
+                    android:id="@+id/wis_save_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/int_save"
+                    android:text="@string/wis_save_label"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/dex_save"
+                    app:layout_constraintStart_toEndOf="@id/wis_save"
+                    app:layout_constraintTop_toTopOf="@id/dex_save" />
+
+                <RadioButton
+                    android:id="@+id/wis_prof"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/prof_shape"
+                    app:layout_constraintBottom_toBottomOf="@id/wis_save"
+                    app:layout_constraintEnd_toStartOf="@id/wis_save"
+                    app:layout_constraintStart_toEndOf="@id/dex_save_label"
+                    app:layout_constraintTop_toTopOf="@id/wis_save" />
+
+                <EditText
+                    android:id="@+id/wis_save"
+                    android:layout_width="50dp"
+                    android:layout_height="48dp"
+                    android:autofillHints="Edit Text Here"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="@id/saves"
+                    app:layout_constraintStart_toEndOf="@id/str_save"
+                    app:layout_constraintTop_toBottomOf="@id/int_save" />
+
+                <TextView
+                    android:id="@+id/con_save_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/str_save"
+                    android:text="@string/con_save_label"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/con_save"
+                    app:layout_constraintStart_toEndOf="@id/con_save"
+                    app:layout_constraintTop_toTopOf="@id/con_save" />
+
+                <RadioButton
+                    android:id="@+id/con_prof"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/prof_shape"
+                    app:layout_constraintBottom_toBottomOf="@id/con_save"
+                    app:layout_constraintEnd_toStartOf="@id/con_save"
+                    app:layout_constraintStart_toStartOf="@id/saves"
+                    app:layout_constraintTop_toTopOf="@id/con_save" />
+
+                <EditText
+                    android:id="@+id/con_save"
+                    android:layout_width="50dp"
+                    android:layout_height="48dp"
+                    android:autofillHints="Edit Text Here"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toStartOf="@id/cha_save"
+                    app:layout_constraintStart_toStartOf="@id/saves"
+                    app:layout_constraintTop_toBottomOf="@id/dex_save" />
+
+                <TextView
+                    android:id="@+id/cha_save_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/int_save"
+                    android:text="@string/cha_save_label"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/con_save"
+                    app:layout_constraintStart_toEndOf="@id/cha_save"
+                    app:layout_constraintTop_toTopOf="@id/con_save" />
+
+                <RadioButton
+                    android:id="@+id/cha_prof"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/prof_shape"
+                    app:layout_constraintBottom_toBottomOf="@id/cha_save"
+                    app:layout_constraintEnd_toStartOf="@id/cha_save"
+                    app:layout_constraintStart_toEndOf="@id/con_save_label"
+                    app:layout_constraintTop_toTopOf="@id/cha_save" />
+
+                <EditText
+                    android:id="@+id/cha_save"
+                    android:layout_width="50dp"
+                    android:layout_height="48dp"
+                    android:autofillHints="Edit Text Here"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="@id/saves"
+                    app:layout_constraintStart_toEndOf="@id/con_save"
+                    app:layout_constraintTop_toBottomOf="@id/wis_save" />
+
+                <!--SKILLS (Pretty sure it's a waste of time to do all 20 skills in this portion.
+                Just gonna use a big text box instead like with the new-player-friendly character cards.)-->
+                <TextView
+                    android:id="@+id/skill_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/skills"
+                    android:text="@string/skills_label"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/skills"
+                    app:layout_constraintEnd_toEndOf="@id/skills"
+                    app:layout_constraintStart_toStartOf="@id/skills" />
+
+                <ImageView
+                    android:id="@+id/skills"
+                    android:layout_width="300dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/skills"
+                    android:contentDescription="@string/skill_desc"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/saves" />
+
+                <EditText
+                    android:id="@+id/skills_box"
+                    android:layout_width="280dp"
+                    android:layout_height="180dp"
+                    android:autofillHints="Edit Text Here"
+                    android:inputType="none"
+                    app:layout_constraintBottom_toBottomOf="@id/skills"
+                    app:layout_constraintEnd_toEndOf="@id/skills"
+                    app:layout_constraintStart_toStartOf="@id/skills"
+                    app:layout_constraintTop_toTopOf="@id/skills" />
+
+                <!--ATTACKS (Same thing as above)-->
+                <TextView
+                    android:id="@+id/attack_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/attacks"
+                    android:text="@string/attacks_label"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/attacks"
+                    app:layout_constraintEnd_toEndOf="@id/attacks"
+                    app:layout_constraintStart_toStartOf="@id/attacks" />
+
+                <ImageView
+                    android:id="@+id/attacks"
+                    android:layout_width="300dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/skills"
+                    android:contentDescription="@string/attack_desc"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/skills" />
+
+                <EditText
+                    android:id="@+id/attacks_box"
+                    android:layout_width="280dp"
+                    android:layout_height="180dp"
+                    android:autofillHints="Edit Text Here"
+                    android:inputType="none"
+                    app:layout_constraintBottom_toBottomOf="@id/attacks"
+                    app:layout_constraintEnd_toEndOf="@id/attacks"
+                    app:layout_constraintStart_toStartOf="@id/attacks"
+                    app:layout_constraintTop_toTopOf="@id/attacks" />
+
+                <!--FEATURES/TRAITS-->
+                <TextView
+                    android:id="@+id/features_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/features"
+                    android:text="@string/features_label"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/features"
+                    app:layout_constraintEnd_toEndOf="@id/features"
+                    app:layout_constraintStart_toStartOf="@id/features" />
+
+                <ImageView
+                    android:id="@+id/features"
+                    android:layout_width="300dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/skills"
+                    android:contentDescription="@string/features_desc"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/attacks" />
+
+                <EditText
+                    android:id="@+id/features_box"
+                    android:layout_width="280dp"
+                    android:layout_height="180dp"
+                    android:autofillHints="Edit Text Here"
+                    android:inputType="none"
+                    app:layout_constraintBottom_toBottomOf="@id/features"
+                    app:layout_constraintEnd_toEndOf="@id/features"
+                    app:layout_constraintStart_toStartOf="@id/features"
+                    app:layout_constraintTop_toTopOf="@id/features" />
+
+                <!--EQUIPMENT-->
+                <TextView
+                    android:id="@+id/eq_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/equipment"
+                    android:text="@string/eq_label"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/equipment"
+                    app:layout_constraintEnd_toEndOf="@id/equipment"
+                    app:layout_constraintStart_toStartOf="@id/equipment" />
+
+                <ImageView
+                    android:id="@+id/equipment"
+                    android:layout_width="300dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/skills"
+                    android:contentDescription="@string/eq_desc"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/features" />
+
+                <EditText
+                    android:id="@+id/eq_box"
+                    android:layout_width="280dp"
+                    android:layout_height="180dp"
+                    android:autofillHints="Edit Text Here"
+                    android:inputType="none"
+                    app:layout_constraintBottom_toBottomOf="@id/equipment"
+                    app:layout_constraintEnd_toEndOf="@id/equipment"
+                    app:layout_constraintStart_toStartOf="@id/equipment"
+                    app:layout_constraintTop_toTopOf="@id/equipment" />
+
+                <!--PROFICIENCIES-->
+                <TextView
+                    android:id="@+id/other_prof_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@id/other_prof"
+                    android:text="@string/other_prof_label"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/other_prof"
+                    app:layout_constraintEnd_toEndOf="@id/other_prof"
+                    app:layout_constraintStart_toStartOf="@id/other_prof" />
+
+                <ImageView
+                    android:id="@+id/other_prof"
+                    android:layout_width="300dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/skills"
+                    android:contentDescription="@string/other_prof_desc"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/equipment" />
+
+                <EditText
+                    android:id="@+id/other_prof_box"
+                    android:layout_width="280dp"
+                    android:layout_height="180dp"
+                    android:autofillHints="Edit Text Here"
+                    android:inputType="none"
+                    app:layout_constraintBottom_toBottomOf="@id/other_prof"
+                    app:layout_constraintEnd_toEndOf="@id/other_prof"
+                    app:layout_constraintStart_toStartOf="@id/other_prof"
+                    app:layout_constraintTop_toTopOf="@id/other_prof" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.fragment.app.FragmentContainerView>
+    </ScrollView>
+</layout>
