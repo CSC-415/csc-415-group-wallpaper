@@ -38,5 +38,6 @@
     <string name="other_prof_label"><![CDATA[OTHER PROFICIENCIES & LANGUAGES]]></string>
     <string name="other_prof_desc">Background for other proficiences box</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="save_button_text">SAVE</string>
 
 </resources>
