@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager.commit {
             setReorderingAllowed(true)
-            add<BlankSheetFragment>(R.id.fragment_container_view)
+            add(R.id.fragment_scroll, BlankSheetFragment())
         }
     }
 }
