@@ -16,7 +16,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class BlankSheetFragment() : Fragment(){
+class BlankSheetFragment() : Fragment() {
     private var _binding: FragmentBlankSheetBinding? = null
     private val binding get() = _binding!!
 
@@ -73,21 +73,58 @@ class BlankSheetFragment() : Fragment(){
             wisBox.setText(character.charWisdom.toString())
             chaBox.setText(character.charCharisma.toString())
             armorClass.setText(character.charAC.toString())
+            initiative.setText(character.charInitiative)
+            speed.setText(character.charSpeed)
+            currHp.setText(character.charCurrentHP)
+            tempHp.setText(character.charCurrentHP)
+            strSave.setText(character.charStrSave)
+            dexSave.setText(character.charDexSave)
+            conSave.setText(character.charConSave)
+            intSave.setText(character.charIntSave)
+            wisSave.setText(character.charWisSave)
+            chaSave.setText(character.charChaSave)
+            skillsBox.setText(character.charSkillsBox)
+            attacksBox.setText(character.charAttacksAndSpellcasting)
+            featuresBox.setText(character.charFeaturesAndTraits)
+            eqBox.setText(character.charEquipment)
         }
     }
 
     private fun bindInputToObject(character: Character) {
         binding.apply {
-            saveButton.setOnClickListener{
-                character.charName = nameBox.text.toString()
-
+            saveButton.setOnClickListener {
+                character.apply{
+                    charName = nameBox.text.toString()
+                    charClass = classLevel.text.toString()
+                    charBackground = background.text.toString()
+                    charPlayerName = playerName.text.toString()
+                    charRace = race.text.toString()
+                    charAlignment = alignment.text.toString()
+                    charExperiencePoints = xp.text.toString().toInt()
+                    charStrength = strBox.text.toString().toInt()
+                    charDexterity = dexBox.text.toString().toInt()
+                    charConstitution = conBox.text.toString().toInt()
+                    charWisdom = wisBox.text.toString().toInt()
+                    charIntelligence = intBox.text.toString().toInt()
+                    charCharisma = chaBox.text.toString().toInt()
+                    charAC = armorClass.text.toString().toInt()
+                    charInitiative = initiative.text.toString().toInt()
+                    charSpeed = speed.text.toString().toInt()
+                    charCurrentHP = currHp.text.toString().toInt()
+                    charTempHP = tempHp.text.toString().toInt()
+                    charStrSave = strSave.text.toString().toInt()
+                    charDexSave = dexSave.text.toString().toInt()
+                    charConSave = conSave.text.toString().toInt()
+                    charIntSave = intSave.text.toString().toInt()
+                    charWisSave = wisSave.text.toString().toInt()
+                    charChaSave = chaSave.text.toString().toInt()
+                    charSkillsBox = skillsBox.text.toString()
+                    charAttacksAndSpellcasting = skillsBox.text.toString()
+                    charFeaturesAndTraits = featuresBox.text.toString()
+                    charEquipment = eqBox.text.toString()
+                }
                 viewModel.saveCharacterToPreferences(character)
             }
-//            nameBox.doAfterTextChanged {
-//
-//            }
-
-            // This is your next one
         }
     }
 }
