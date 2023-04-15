@@ -10,11 +10,6 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragment_container_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -841,6 +836,5 @@
                     app:layout_constraintStart_toStartOf="@id/other_prof"
                     app:layout_constraintTop_toTopOf="@id/other_prof" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.fragment.app.FragmentContainerView>
     </ScrollView>
 </layout>
