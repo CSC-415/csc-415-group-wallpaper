@@ -73,16 +73,16 @@ class BlankSheetFragment() : Fragment() {
             wisBox.setText(character.charWisdom.toString())
             chaBox.setText(character.charCharisma.toString())
             armorClass.setText(character.charAC.toString())
-            initiative.setText(character.charInitiative)
-            speed.setText(character.charSpeed)
-            currHp.setText(character.charCurrentHP)
-            tempHp.setText(character.charCurrentHP)
-            strSave.setText(character.charStrSave)
-            dexSave.setText(character.charDexSave)
-            conSave.setText(character.charConSave)
-            intSave.setText(character.charIntSave)
-            wisSave.setText(character.charWisSave)
-            chaSave.setText(character.charChaSave)
+            initiative.setText(character.charInitiative.toString())
+            speed.setText(character.charSpeed.toString())
+            currHp.setText(character.charCurrentHP.toString())
+            tempHp.setText(character.charCurrentHP.toString())
+            strSave.setText(character.charStrSave.toString())
+            dexSave.setText(character.charDexSave.toString())
+            conSave.setText(character.charConSave.toString())
+            intSave.setText(character.charIntSave.toString())
+            wisSave.setText(character.charWisSave.toString())
+            chaSave.setText(character.charChaSave.toString())
             skillsBox.setText(character.charSkillsBox)
             attacksBox.setText(character.charAttacksAndSpellcasting)
             featuresBox.setText(character.charFeaturesAndTraits)
@@ -93,7 +93,7 @@ class BlankSheetFragment() : Fragment() {
     private fun bindInputToObject(character: Character) {
         binding.apply {
             saveButton.setOnClickListener {
-                character.apply{
+                character.apply {
                     charName = nameBox.text.toString()
                     charClass = classLevel.text.toString()
                     charBackground = background.text.toString()
