@@ -110,7 +110,8 @@
                         android:textColor="@color/black"
                         app:layout_constraintBottom_toBottomOf="@id/header"
                         app:layout_constraintStart_toStartOf="@id/header"
-                        app:layout_constraintTop_toTopOf="@id/header" />
+                        app:layout_constraintTop_toTopOf="@id/header"
+                        />
 
                     <EditText
                         android:id="@+id/class_level"
@@ -436,6 +437,7 @@
                         android:autofillHints="Edit Text Here"
                         android:background="@drawable/box_square"
                         android:inputType="number"
+                        android:textAlignment="center"
                         android:textColor="@color/black"
                         app:layout_constraintEnd_toStartOf="@id/temp_hp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -448,6 +450,7 @@
                         android:autofillHints="Edit Text Here"
                         android:background="@drawable/box_square"
                         android:inputType="number"
+                        android:textAlignment="center"
                         android:textColor="@color/black"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/curr_hp"
