@@ -39,6 +39,7 @@ class BlankSheetFragment : Fragment() {
         binding.saveButton.setOnClickListener{
             Log.d("SAVE", "BUTTON CLICKED")
         }
+
         viewModel.getCharacterFromPreferences()
     }
 
@@ -69,7 +70,7 @@ class BlankSheetFragment : Fragment() {
             playerName.setText(character.charPlayerName)
             race.setText(character.charRace)
             alignment.setText(character.charAlignment)
-            xp.setText(character.charExperiencePoints)
+            xp.setText(character.charExperiencePoints.toString())
             strBox.setText(character.charStrength.toString())
             dexBox.setText(character.charDexterity.toString())
             conBox.setText(character.charConstitution.toString())
@@ -94,7 +95,7 @@ class BlankSheetFragment : Fragment() {
         }
     }
 
-    fun bindInputToObject(character: Character) {
+    private fun bindInputToObject(character: Character) {
         binding.saveButton.setOnClickListener {
             binding.apply {
                 Log.d("SAVE", "SAVE WAS CLICKED")
@@ -105,7 +106,7 @@ class BlankSheetFragment : Fragment() {
                     charPlayerName = playerName.text.toString()
                     charRace = race.text.toString()
                     charAlignment = alignment.text.toString()
-                    charExperiencePoints = xp.text.toString()
+                    charExperiencePoints = xp.text.toString().toInt()
                     charStrength = strBox.text.toString().toInt()
                     charDexterity = dexBox.text.toString().toInt()
                     charConstitution = conBox.text.toString().toInt()
@@ -132,5 +133,4 @@ class BlankSheetFragment : Fragment() {
             }
         }
     }
-
 }

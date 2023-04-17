@@ -24,7 +24,11 @@ object ModelPreferenceManager {
     //changing
     inline fun <reified Character> get(key: String): Character {
         val value = preferences.getString(key, null)
-        Log.d("ModelPreferenceManager", "Retrieving object with key $key: $value")
-        return GsonBuilder().create().fromJson(value, Character::class.java)
+        if(value == null){
+            return Character::class.java.newInstance()
+        }else{
+            Log.d("ModelPreferenceManager", "Retrieving object with key $key: $value")
+            return GsonBuilder().create().fromJson(value, Character::class.java)
+        }
     }
 }
