@@ -843,7 +843,7 @@
                         app:layout_constraintBottom_toBottomOf="@id/other_prof_box"
                         app:layout_constraintEnd_toEndOf="@id/other_prof_box"
                         app:layout_constraintStart_toStartOf="@id/other_prof_box"
-                        app:layout_constraintTop_toTopOf="@id/other_prof_box" />
+                        />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
