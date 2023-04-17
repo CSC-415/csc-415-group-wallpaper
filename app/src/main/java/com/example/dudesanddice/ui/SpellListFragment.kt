@@ -1,4 +1,3 @@
 package com.example.dudesanddice.ui
 
-class SpellListFragment {
-}
+class SpellListFragment

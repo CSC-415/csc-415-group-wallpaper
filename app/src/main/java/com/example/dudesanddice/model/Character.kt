@@ -8,7 +8,7 @@ data class Character(
     var charPlayerName: String = "",
     var charRace: String = "",
     var charAlignment: String = "",
-    var charExperiencePoints: Int = 0,
+    var charExperiencePoints: String = "",
 
     //Stats
     var charStrength: Int = 0,
