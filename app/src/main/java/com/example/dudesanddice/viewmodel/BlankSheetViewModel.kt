@@ -29,26 +29,9 @@ class BlankSheetViewModel @Inject constructor() : ViewModel() {
         }
     }
 
-
-
-
-//    fun onTextChanged(text: CharSequence?, start: Int, end: Int, changed: Int) {
-//        // Figure out a better way to update your character or something,
-//        // preferably, you would want to find a generic solution rather than
-//        // making a new function for everything.
-//        saveCharacterToPreferences(character)
-//    }
-
     companion object {
         private const val PREFERENCES_CHARACTER_KEY = "user_char"
     }
-
-
-//    sealed class SavedDataEvent {
-//        data class Success(val myCharacter: Character) : SavedDataEvent()
-//        object Failure : SavedDataEvent()
-//        object Loading : SavedDataEvent()
-//    }
 }
 
 sealed class CharacterSheetViewState {
