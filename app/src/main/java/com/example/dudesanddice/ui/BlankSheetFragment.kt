@@ -16,11 +16,9 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class BlankSheetFragment(binding: FragmentBlankSheetBinding) : Fragment() {
-//    private var _binding: FragmentBlankSheetBinding? = null
-//    private val binding get() = _binding!!
-    private var _binding = binding
-    private val binding get() = _binding
+class BlankSheetFragment() : Fragment() {
+    private var _binding: FragmentBlankSheetBinding? = null
+    private val binding get() = _binding!!
 
     private val viewModel: BlankSheetViewModel by activityViewModels()
 
@@ -37,11 +35,6 @@ class BlankSheetFragment(binding: FragmentBlankSheetBinding) : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupObservers()
-
-        binding.saveButton.setOnClickListener{
-            Log.d("SAVE", "BUTTON CLICKED")
-        }
-
         viewModel.getCharacterFromPreferences()
     }
 
@@ -99,7 +92,7 @@ class BlankSheetFragment(binding: FragmentBlankSheetBinding) : Fragment() {
     private fun bindInputToObject(character: Character) {
         binding.saveButton.setOnClickListener {
             binding.apply {
-                Log.d("SAVE", "SAVE WAS CLICKED")
+                Log.d("SAVE", "SAVE WAS REALLY CLICKED")
                 character.apply {
                     charName = nameBox.text.toString()
                     charClass = classLevel.text.toString()
