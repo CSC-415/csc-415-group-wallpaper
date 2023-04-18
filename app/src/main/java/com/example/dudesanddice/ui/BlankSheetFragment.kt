@@ -2,7 +2,6 @@ package com.example.dudesanddice.ui
 
 import android.os.Bundle
 import android.util.Log
-import android.view.FocusFinder
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,9 +16,12 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class BlankSheetFragment : Fragment() {
-    private var _binding: FragmentBlankSheetBinding? = null
-    private val binding get() = _binding!!
+class BlankSheetFragment(binding: FragmentBlankSheetBinding) : Fragment() {
+//    private var _binding: FragmentBlankSheetBinding? = null
+//    private val binding get() = _binding!!
+    private var _binding = binding
+    private val binding get() = _binding
+
     private val viewModel: BlankSheetViewModel by activityViewModels()
 
 
@@ -45,7 +47,6 @@ class BlankSheetFragment : Fragment() {
 
     override fun onDestroy() {
         super.onDestroy()
-        _binding = null
     }
 
     private fun setupObservers() {
