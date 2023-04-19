@@ -19,7 +19,7 @@
             <ImageView
                 android:id="@+id/header"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
                 android:background="@drawable/header1"
                 android:contentDescription="@string/header_str"
                 app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,7 @@
             <ImageView
                 android:id="@+id/header2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/header2"
                 android:contentDescription="@string/header_str"
@@ -39,7 +39,7 @@
                 android:id="@+id/name_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="25dp"
                 android:labelFor="@id/name_box"
                 android:textStyle="bold"
                 android:text="@string/name_label"
@@ -52,7 +52,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:layout_marginBottom="2dp"
                 android:labelFor="@id/class_level"
                 android:text="@string/class_label"
                 android:textSize="15sp"
@@ -117,12 +116,14 @@
             <EditText
                 android:id="@+id/name_box"
                 android:layout_width="300dp"
-                android:layout_height="30dp"
+                android:layout_height="60dp"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="20dp"
                 android:autofillHints="Name Here"
                 android:inputType="none"
                 android:textColor="@color/black"
+                android:textSize="20sp"
+                tools:text="EXAMPLE"
                 app:layout_constraintBottom_toBottomOf="@id/header"
                 app:layout_constraintStart_toStartOf="@id/header"
                 app:layout_constraintTop_toTopOf="@id/header" />
@@ -130,19 +131,23 @@
             <EditText
                 android:id="@+id/class_level"
                 android:layout_width="120dp"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15sp"
+                tools:text="EXAMPLE"
                 android:autofillHints="Class/Level Here"
-                android:layout_marginTop="10dp"
                 android:inputType="none"
                 android:textColor="@color/black"
-                app:layout_constraintStart_toStartOf="@id/header2"
                 app:layout_constraintEnd_toStartOf="@id/background"
+                app:layout_constraintStart_toStartOf="@id/header2"
                 app:layout_constraintTop_toTopOf="@id/header2" />
 
             <EditText
                 android:id="@+id/background"
                 android:layout_width="120dp"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="15sp"
+                tools:text="EXAMPLE"
                 android:autofillHints="Background Here"
                 android:inputType="none"
                 android:textColor="@color/black"
@@ -153,7 +158,9 @@
             <EditText
                 android:id="@+id/player_name"
                 android:layout_width="120dp"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="15sp"
+                tools:text="EXAMPLE"
                 android:autofillHints="Player Name Here"
                 android:inputType="none"
                 android:textColor="@color/black"
@@ -164,18 +171,23 @@
             <EditText
                 android:id="@+id/race"
                 android:layout_width="120dp"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="15sp"
+                tools:text="EXAMPLE"
+                android:layout_marginBottom="16dp"
                 android:autofillHints="Race Here"
                 android:inputType="none"
                 android:textColor="@color/black"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/header2"
                 app:layout_constraintEnd_toStartOf="@id/alignment"
-                app:layout_constraintTop_toBottomOf="@id/class_level" />
+                app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
                 android:id="@+id/alignment"
                 android:layout_width="120dp"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="15sp"
+                tools:text="EXAMPLE"
                 android:autofillHints="Alignment Here"
                 android:inputType="none"
                 android:textColor="@color/black"
@@ -186,7 +198,9 @@
             <EditText
                 android:id="@+id/xp"
                 android:layout_width="120dp"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
+                android:textSize="15sp"
+                tools:text="EXAMPLE"
                 android:autofillHints="Experience Here"
                 android:inputType="number"
                 android:textColor="@color/black"
@@ -504,14 +518,15 @@
                 android:labelFor="@id/str_save"
                 android:text="@string/str_save_label"
                 android:textStyle="bold"
+                android:layout_marginEnd="10dp"
                 app:layout_constraintBottom_toBottomOf="@id/str_save"
                 app:layout_constraintStart_toEndOf="@id/str_save"
                 app:layout_constraintTop_toTopOf="@id/str_save" />
 
             <RadioButton
                 android:id="@+id/str_prof"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:background="@drawable/prof_shape"
                 app:layout_constraintBottom_toBottomOf="@id/str_save"
                 app:layout_constraintEnd_toStartOf="@id/str_save"
@@ -541,8 +556,8 @@
 
             <RadioButton
                 android:id="@+id/int_prof"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:background="@drawable/prof_shape"
                 app:layout_constraintBottom_toBottomOf="@id/int_save"
                 app:layout_constraintEnd_toStartOf="@id/int_save"
@@ -572,8 +587,8 @@
 
             <RadioButton
                 android:id="@+id/dex_prof"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:background="@drawable/prof_shape"
                 app:layout_constraintBottom_toBottomOf="@id/dex_save"
                 app:layout_constraintEnd_toStartOf="@id/dex_save"
@@ -603,8 +618,8 @@
 
             <RadioButton
                 android:id="@+id/wis_prof"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:background="@drawable/prof_shape"
                 app:layout_constraintBottom_toBottomOf="@id/wis_save"
                 app:layout_constraintEnd_toStartOf="@id/wis_save"
@@ -634,8 +649,8 @@
 
             <RadioButton
                 android:id="@+id/con_prof"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:background="@drawable/prof_shape"
                 app:layout_constraintBottom_toBottomOf="@id/con_save"
                 app:layout_constraintEnd_toStartOf="@id/con_save"
@@ -665,8 +680,8 @@
 
             <RadioButton
                 android:id="@+id/cha_prof"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:background="@drawable/prof_shape"
                 app:layout_constraintBottom_toBottomOf="@id/cha_save"
                 app:layout_constraintEnd_toStartOf="@id/cha_save"
