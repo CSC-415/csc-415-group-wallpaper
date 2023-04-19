@@ -86,6 +86,7 @@ class BlankSheetFragment() : Fragment() {
             attacksBox.setText(character.charAttacksAndSpellcasting)
             featuresBox.setText(character.charFeaturesAndTraits)
             eqBox.setText(character.charEquipment)
+            otherProfBox.setText(character.charProficienciesAndLanguages)
         }
     }
 
@@ -122,6 +123,7 @@ class BlankSheetFragment() : Fragment() {
                     charAttacksAndSpellcasting = skillsBox.text.toString()
                     charFeaturesAndTraits = featuresBox.text.toString()
                     charEquipment = eqBox.text.toString()
+                    charProficienciesAndLanguages = otherProfBox.text.toString()
                     viewModel.saveCharacterToPreferences(character)
                 }
             }
