@@ -5,15 +5,22 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.lifecycleScope
+import com.example.dudesanddice.data.model.ClassesResponse
+import com.example.dudesanddice.data.repository.ClassesRepository
 import com.example.dudesanddice.databinding.FragmentBlankSheetBinding
 import com.example.dudesanddice.model.Character
+import com.example.dudesanddice.model.Classes
 import com.example.dudesanddice.viewmodel.BlankSheetViewModel
 import com.example.dudesanddice.viewmodel.CharacterSheetViewState
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class BlankSheetFragment() : Fragment() {
@@ -21,7 +28,6 @@ class BlankSheetFragment() : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel: BlankSheetViewModel by activityViewModels()
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,10 +38,13 @@ class BlankSheetFragment() : Fragment() {
         return binding.root
     }
 
+
+    //add api here
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupObservers()
         viewModel.getCharacterFromPreferences()
+
     }
 
     override fun onDestroy() {
@@ -55,6 +64,10 @@ class BlankSheetFragment() : Fragment() {
             }
         }
     }
+    //private fun to be called and return class list from api
+
+
+
 
     private fun bindSavedData(character: Character) {
         binding.apply {
@@ -129,4 +142,5 @@ class BlankSheetFragment() : Fragment() {
             }
         }
     }
+
 }

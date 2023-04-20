@@ -8,6 +8,7 @@ import androidx.fragment.app.commit
 import com.example.dudesanddice.databinding.ActivityMainBinding
 import com.example.dudesanddice.ui.BlankSheetFragment
 import dagger.hilt.android.AndroidEntryPoint
+import kotlin.text.Typography.dagger
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
