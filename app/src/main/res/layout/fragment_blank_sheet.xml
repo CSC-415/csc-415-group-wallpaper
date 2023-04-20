@@ -23,7 +23,7 @@
                 android:background="@drawable/header1"
                 android:contentDescription="@string/header_str"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/header2"
@@ -33,7 +33,7 @@
                 android:background="@drawable/header2"
                 android:contentDescription="@string/header_str"
                 app:layout_constraintStart_toStartOf="@id/header"
-                app:layout_constraintTop_toBottomOf="@id/name_label"/>
+                app:layout_constraintTop_toBottomOf="@id/name_label" />
 
             <TextView
                 android:id="@+id/name_label"
@@ -41,20 +41,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
                 android:labelFor="@id/name_box"
-                android:textStyle="bold"
                 android:text="@string/name_label"
-                app:layout_constraintStart_toStartOf="parent"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/name_box" />
 
             <TextView
                 android:id="@+id/class_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
                 android:labelFor="@id/class_level"
                 android:text="@string/class_label"
                 android:textSize="15sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@id/class_level"
                 app:layout_constraintStart_toStartOf="@id/class_level" />
 
@@ -63,31 +63,31 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:labelFor="@id/background"
-                android:textStyle="bold"
                 android:text="@string/bg_label"
                 android:textSize="15sp"
-                app:layout_constraintTop_toTopOf="@id/class_label"
-                app:layout_constraintStart_toStartOf="@id/background" />
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/background"
+                app:layout_constraintTop_toTopOf="@id/class_label" />
 
             <TextView
                 android:id="@+id/player_name_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:labelFor="@id/player_name"
-                android:textStyle="bold"
                 android:text="@string/player_name_label"
                 android:textSize="15sp"
-                app:layout_constraintTop_toTopOf="@id/class_label"
-                app:layout_constraintStart_toStartOf="@id/player_name" />
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/player_name"
+                app:layout_constraintTop_toTopOf="@id/class_label" />
 
             <TextView
                 android:id="@+id/race_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:labelFor="@id/race"
-                android:textStyle="bold"
                 android:text="@string/race_label"
                 android:textSize="15sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@id/race"
                 app:layout_constraintTop_toBottomOf="@id/race" />
 
@@ -96,9 +96,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:labelFor="@id/alignment"
-                android:textStyle="bold"
                 android:text="@string/alignment_label"
                 android:textSize="15sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@id/alignment"
                 app:layout_constraintTop_toTopOf="@id/race_label" />
 
@@ -107,9 +107,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:labelFor="@id/class_level"
-                android:textStyle="bold"
                 android:text="@string/xp_label"
                 android:textSize="15sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@id/xp"
                 app:layout_constraintTop_toTopOf="@id/race_label" />
 
@@ -123,24 +123,24 @@
                 android:inputType="none"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                tools:text="EXAMPLE"
                 app:layout_constraintBottom_toBottomOf="@id/header"
                 app:layout_constraintStart_toStartOf="@id/header"
-                app:layout_constraintTop_toTopOf="@id/header" />
+                app:layout_constraintTop_toTopOf="@id/header"
+                tools:text="EXAMPLE" />
 
             <EditText
                 android:id="@+id/class_level"
                 android:layout_width="120dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
-                android:textSize="15sp"
-                tools:text="EXAMPLE"
                 android:autofillHints="Class/Level Here"
                 android:inputType="none"
                 android:textColor="@color/black"
+                android:textSize="15sp"
                 app:layout_constraintEnd_toStartOf="@id/background"
                 app:layout_constraintStart_toStartOf="@id/header2"
-                app:layout_constraintTop_toTopOf="@id/header2" />
+                app:layout_constraintTop_toTopOf="@id/header2"
+                tools:text="EXAMPLE" />
 
             <Spinner
                 android:id="@+id/class_spinner"
@@ -154,67 +154,67 @@
                 android:id="@+id/background"
                 android:layout_width="120dp"
                 android:layout_height="50dp"
-                android:textSize="15sp"
-                tools:text="EXAMPLE"
                 android:autofillHints="Background Here"
                 android:inputType="none"
                 android:textColor="@color/black"
-                app:layout_constraintStart_toEndOf="@id/class_level"
+                android:textSize="15sp"
                 app:layout_constraintEnd_toStartOf="@id/player_name"
-                app:layout_constraintTop_toTopOf="@id/class_level" />
+                app:layout_constraintStart_toEndOf="@id/class_level"
+                app:layout_constraintTop_toTopOf="@id/class_level"
+                tools:text="EXAMPLE" />
 
             <EditText
                 android:id="@+id/player_name"
                 android:layout_width="120dp"
                 android:layout_height="50dp"
-                android:textSize="15sp"
-                tools:text="EXAMPLE"
                 android:autofillHints="Player Name Here"
                 android:inputType="none"
                 android:textColor="@color/black"
-                app:layout_constraintStart_toEndOf="@id/background"
+                android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="@id/header2"
-                app:layout_constraintTop_toTopOf="@id/class_level" />
+                app:layout_constraintStart_toEndOf="@id/background"
+                app:layout_constraintTop_toTopOf="@id/class_level"
+                tools:text="EXAMPLE" />
 
             <EditText
                 android:id="@+id/race"
                 android:layout_width="120dp"
                 android:layout_height="50dp"
-                android:textSize="15sp"
-                tools:text="EXAMPLE"
                 android:layout_marginBottom="16dp"
                 android:autofillHints="Race Here"
                 android:inputType="none"
                 android:textColor="@color/black"
+                android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="@id/header2"
                 app:layout_constraintEnd_toStartOf="@id/alignment"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="EXAMPLE" />
 
             <EditText
                 android:id="@+id/alignment"
                 android:layout_width="120dp"
                 android:layout_height="50dp"
-                android:textSize="15sp"
-                tools:text="EXAMPLE"
                 android:autofillHints="Alignment Here"
                 android:inputType="none"
                 android:textColor="@color/black"
-                app:layout_constraintStart_toEndOf="@id/race"
+                android:textSize="15sp"
                 app:layout_constraintEnd_toStartOf="@id/xp"
-                app:layout_constraintTop_toTopOf="@id/race" />
+                app:layout_constraintStart_toEndOf="@id/race"
+                app:layout_constraintTop_toTopOf="@id/race"
+                tools:text="EXAMPLE" />
 
             <EditText
                 android:id="@+id/xp"
                 android:layout_width="120dp"
                 android:layout_height="50dp"
-                android:textSize="15sp"
-                tools:text="EXAMPLE"
                 android:autofillHints="Experience Here"
                 android:inputType="number"
                 android:textColor="@color/black"
-                app:layout_constraintStart_toEndOf="@id/alignment"
+                android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/race" />
+                app:layout_constraintStart_toEndOf="@id/alignment"
+                app:layout_constraintTop_toTopOf="@id/race"
+                tools:text="EXAMPLE" />
 
             <!--ATTRIBUTES-->
             <TextView
@@ -287,8 +287,8 @@
                 android:id="@+id/str_box"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-                android:autofillHints="Edit Text Here"
                 android:layout_marginTop="30dp"
+                android:autofillHints="Edit Text Here"
                 android:background="@drawable/attribute"
                 android:digits="0123456789"
                 android:inputType="number"
@@ -297,7 +297,7 @@
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toStartOf="@id/dex_box"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/header2"/>
+                app:layout_constraintTop_toBottomOf="@id/header2" />
 
             <EditText
                 android:id="@+id/dex_box"
@@ -523,10 +523,10 @@
                 android:id="@+id/str_save_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
                 android:labelFor="@id/str_save"
                 android:text="@string/str_save_label"
                 android:textStyle="bold"
-                android:layout_marginEnd="10dp"
                 app:layout_constraintBottom_toBottomOf="@id/str_save"
                 app:layout_constraintStart_toEndOf="@id/str_save"
                 app:layout_constraintTop_toTopOf="@id/str_save" />
@@ -881,12 +881,23 @@
                 android:id="@+id/save_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/save_button_text"
                 android:layout_margin="20dp"
                 android:backgroundTint="@color/black"
-                app:layout_constraintTop_toBottomOf="@id/other_prof_box"
+                android:text="@string/save_button_text"
                 app:layout_constraintEnd_toEndOf="@id/other_prof_box"
-                app:layout_constraintStart_toStartOf="@id/other_prof_box" />
+                app:layout_constraintStart_toStartOf="@id/other_prof_box"
+                app:layout_constraintTop_toBottomOf="@id/other_prof_box" />
+
+            <Button
+                android:id="@+id/clear_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:backgroundTint="@color/black"
+                android:text="@string/clear"
+                app:layout_constraintEnd_toEndOf="@id/save_button"
+                app:layout_constraintStart_toStartOf="@id/save_button"
+                app:layout_constraintTop_toBottomOf="@id/save_button" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

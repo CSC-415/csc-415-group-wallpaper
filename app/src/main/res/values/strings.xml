@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TestDND</string>
+    <string name="app_name">DudesAndDice</string>
     <string name="test_label">Test Label</string>
     <string name="str_label">STRENGTH</string>
     <string name="dex_label">DEXTERITY</string>
@@ -39,5 +39,6 @@
     <string name="other_prof_desc">Background for other proficiences box</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="save_button_text">SAVE</string>
+    <string name="clear">CLEAR</string>
 
 </resources>

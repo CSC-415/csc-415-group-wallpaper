@@ -1,4 +1,5 @@
 package com.example.dudesanddice.model
+
 import com.squareup.moshi.Json
 
 data class Classes(

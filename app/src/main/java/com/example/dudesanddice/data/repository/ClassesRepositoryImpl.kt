@@ -5,15 +5,15 @@ import com.example.dudesanddice.data.model.ClassesResponse
 import javax.inject.Inject
 
 class ClassesRepositoryImpl @Inject constructor(
-    private val classesApi : ClassesApi,
-):ClassesRepository{
+    private val classesApi: ClassesApi,
+) : ClassesRepository {
     override suspend fun getClasses(): ClassesResponse {
         val result = classesApi.getClasses()
-        return if (result.isSuccessful){
-            ClassesResponse.Success(result.body()?.classes ?:
-            emptyList())
-        }
-        else{
+        return if (result.isSuccessful) {
+            ClassesResponse.Success(
+                result.body()?.classes ?: emptyList()
+            )
+        } else {
             ClassesResponse.Error
         }
     }

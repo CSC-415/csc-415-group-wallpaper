@@ -5,25 +5,19 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.lifecycleScope
-import com.example.dudesanddice.data.model.ClassesResponse
-import com.example.dudesanddice.data.repository.ClassesRepository
 import com.example.dudesanddice.databinding.FragmentBlankSheetBinding
 import com.example.dudesanddice.model.Character
-import com.example.dudesanddice.model.Classes
 import com.example.dudesanddice.viewmodel.BlankSheetViewModel
 import com.example.dudesanddice.viewmodel.CharacterSheetViewState
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
-import javax.inject.Inject
+
 
 @AndroidEntryPoint
-class BlankSheetFragment() : Fragment() {
+class BlankSheetFragment : Fragment() {
     private var _binding: FragmentBlankSheetBinding? = null
     private val binding get() = _binding!!
 
@@ -47,9 +41,6 @@ class BlankSheetFragment() : Fragment() {
 
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-    }
 
     private fun setupObservers() {
         lifecycleScope.launch {
@@ -59,15 +50,13 @@ class BlankSheetFragment() : Fragment() {
                     is CharacterSheetViewState.Success -> {
                         bindSavedData(it.character)
                         bindInputToObject(it.character)
+                        bindClearButton()
                     }
                 }
             }
         }
     }
     //private fun to be called and return class list from api
-
-
-
 
     private fun bindSavedData(character: Character) {
         binding.apply {
@@ -143,4 +132,12 @@ class BlankSheetFragment() : Fragment() {
         }
     }
 
+    private fun bindClearButton() {
+        binding.apply {
+            clearButton.setOnClickListener {
+                val character = Character()
+                bindSavedData(character)
+            }
+        }
+    }
 }

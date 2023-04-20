@@ -11,4 +11,4 @@ data class Spell(
     val spellDuration: String,
     val spellDescription: String
 
-    )
+)
