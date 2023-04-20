@@ -122,7 +122,7 @@ class BlankSheetFragment : Fragment() {
                     charWisSave = wisSave.text.toString().toInt()
                     charChaSave = chaSave.text.toString().toInt()
                     charSkillsBox = skillsBox.text.toString()
-                    charAttacksAndSpellcasting = skillsBox.text.toString()
+                    charAttacksAndSpellcasting = attacksBox.text.toString()
                     charFeaturesAndTraits = featuresBox.text.toString()
                     charEquipment = eqBox.text.toString()
                     charProficienciesAndLanguages = otherProfBox.text.toString()
